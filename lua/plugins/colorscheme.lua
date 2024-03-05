@@ -1,9 +1,11 @@
 return {
   { "Mofiqul/vscode.nvim" },
+  { "rebelot/kanagawa.nvim" },
+  { "catppuccin/nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vscode",
+      colorscheme = "tokyonight-night",
     },
   },
 }
