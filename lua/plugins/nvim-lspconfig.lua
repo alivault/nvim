@@ -1,11 +1,10 @@
 return {
   "neovim/nvim-lspconfig",
   opts = function(_, opts)
-    -- Ensures that the 'servers' table exists or initializes it
+    -- Ensure 'servers' configuration exists
     opts.servers = opts.servers or {}
 
-    -- Configuring CSS language server settings
-    -- Here we either extend existing `cssls` settings or create a new one
+    -- Extend or set CSS LSP server settings
     local csslsSettings = opts.servers.cssls or {}
     csslsSettings.settings = {
       css = {
@@ -15,9 +14,9 @@ return {
       },
     }
 
-    -- Placing the configured settings back into the main configurations
+    -- Apply the settings
     opts.servers.cssls = csslsSettings
 
-    -- Your existing or additional configuration modifications can go here
+    -- Additional configuration modifications can go here
   end,
 }
