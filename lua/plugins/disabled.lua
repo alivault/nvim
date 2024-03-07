@@ -1,9 +1,3 @@
 return {
-  -- disable markdown linting
-  "mfussenegger/nvim-lint",
-  opts = {
-    linters_by_ft = {
-      markdown = {},
-    },
-  },
+  { "lukas-reineke/headlines.nvim", enabled = false },
 }
