@@ -4,8 +4,5 @@
 
 local keymap = vim.keymap
 
--- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
-
 -- LazyExtras
 keymap.set("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
