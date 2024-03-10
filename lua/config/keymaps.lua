@@ -7,7 +7,7 @@ local map = vim.keymap.set
 -- LazyExtras
 map("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
 
--- Start lazy color scheme picker
+-- Lazy color scheme picker
 local telescope = require("telescope.builtin")
 local function openColorschemePickerWithEvent()
   -- Trigger the User LazyColorscheme event
@@ -17,4 +17,3 @@ local function openColorschemePickerWithEvent()
 end
 -- Set the keymap to call the function
 map("n", "<leader>uC", openColorschemePickerWithEvent, { desc = "Colorscheme with preview" })
--- End lazy color scheme picker
