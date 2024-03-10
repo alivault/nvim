@@ -1,6 +1,17 @@
 return {
   "stevearc/oil.nvim",
-  opts = {},
+  opts = {
+    delete_to_trash = true,
+    keymaps = {
+      ["?"] = "actions.show_help",
+      ["<leader>o"] = "actions.close",
+      ["<C-l>"] = "actions.refresh",
+      ["<C-k>"] = "actions.parent",
+      ["<C-j>"] = "actions.select",
+      ["go"] = "actions.open_external",
+      ["gt"] = "actions.toggle_trash",
+    },
+  },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
     { "<leader>o", "<cmd>Oil<cr>", desc = "Oil File Browser" },
