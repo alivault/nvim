@@ -4,8 +4,7 @@ return {
     delete_to_trash = true,
     keymaps = {
       ["?"] = "actions.show_help",
-      ["<leader>o"] = "actions.close",
-      ["<C-l>"] = "actions.refresh",
+      ["<q>"] = "actions.close",
       ["<C-k>"] = "actions.parent",
       ["<C-j>"] = "actions.select",
       ["go"] = "actions.open_external",
