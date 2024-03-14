@@ -6,3 +6,6 @@ local map = vim.keymap.set
 
 -- LazyExtras
 map("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
+
+-- Select All
+map("n", "<D-a>", "ggVG", { desc = "Select all" })
