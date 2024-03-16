@@ -4,8 +4,7 @@
 
 local map = vim.keymap.set
 
--- LazyExtras
 map("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
-
--- Select All
 map("n", "<D-a>", "ggVG", { desc = "Select all" })
+map("n", "<bs>", "^", { desc = "Start of line (non-blank)" })
+map("n", "<leader>d", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
