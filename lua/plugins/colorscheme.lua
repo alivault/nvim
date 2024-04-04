@@ -1,10 +1,9 @@
 return {
-  "folke/tokyonight.nvim",
-  opts = {
-    style = "night",
-    on_colors = function(colors)
-      colors.bg = colors.bg_dark
-      colors.bg_visual = "#33467C"
-    end,
+  { "projekt0n/github-nvim-theme" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "github_dark_dimmed",
+    },
   },
 }
