@@ -4,3 +4,4 @@
 local opt = vim.opt
 opt.wrap = true
 opt.conceallevel = 0
+opt.cursorline = false
