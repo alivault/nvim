@@ -9,6 +9,7 @@ return {
       },
       style_preset = {
         require("bufferline").style_preset.no_italic,
+        require("bufferline").style_preset.no_bold,
       },
     },
   },
