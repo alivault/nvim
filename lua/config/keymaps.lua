@@ -8,6 +8,8 @@ map("n", "<bs>", "^", { desc = "Start of line (non-blank)" })
 map({ "n", "v" }, "<tab>", "$", { desc = "End of line (non-blank)" })
 map("n", "<D-a>", "ggVG", { desc = "Select all" })
 map("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
+map("n", "<C-->", "<C-o>", { desc = "Move back in jump list" })
+map("n", "<C-=>", "<C-i>", { desc = "Move forward in jump list" })
 
 -- Buffer Line
 map("n", "<leader>d", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
