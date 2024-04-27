@@ -1,6 +1,8 @@
 return {
   "folke/which-key.nvim",
-  opts = function(_, opts)
+  config = function(opts)
+    require("which-key.plugins.presets").operators["v"] = nil
+    require("which-key").setup(opts)
     local wk = require("which-key")
     wk.register({
       ["<leader>i"] = {
