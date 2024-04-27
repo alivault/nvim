@@ -12,7 +12,7 @@ map("n", "<C-->", "<C-o>", { desc = "Move back in jump list" })
 map("n", "<C-=>", "<C-i>", { desc = "Move forward in jump list" })
 
 -- Buffer Line
-map("n", "<leader>d", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
+map("n", "<c-c>", "<cmd>bdelete<cr>", { desc = "Close Buffer" })
 map("n", "<C-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous Buffer" })
 map("n", "<C-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
 map("n", "<C-D-h>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move Buffer Left" })
