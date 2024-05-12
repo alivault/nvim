@@ -5,8 +5,9 @@
 local map = vim.keymap.set
 
 -- General
-map("n", "<bs>", "^", { desc = "Start of line (non-blank)" })
+map({ "n", "v" }, "<bs>", "^", { desc = "Start of line (non-blank)" })
 map({ "n", "v" }, "<tab>", "$", { desc = "End of line (non-blank)" })
+map("n", "d<tab>", "d$", { desc = "End of line" })
 map("n", "<D-a>", "ggVG", { desc = "Select all" })
 map("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
 map("n", "<C-->", "<C-o>", { desc = "Move back in jump list" })
@@ -14,8 +15,8 @@ map("n", "<C-=>", "<C-i>", { desc = "Move forward in jump list" })
 
 -- Buffer Line
 map("n", "<leader>d", "<cmd>bdelete<cr>", { desc = "Close Buffer" })
-map("n", "<C-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous Buffer" })
-map("n", "<C-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
+map({ "n", "v" }, "<C-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous Buffer" })
+map({ "n", "v" }, "<C-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
 map("n", "<C-D-h>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move Buffer Left" })
 map("n", "<C-D-l>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move Buffer Right" })
 
