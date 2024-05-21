@@ -1,8 +1,11 @@
 return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = function(_, opts)
-      opts.servers.cssls = {
+  "neovim/nvim-lspconfig",
+  opts = {
+    document_highlight = {
+      enabled = false,
+    },
+    servers = {
+      cssls = {
         settings = {
           css = {
             lint = {
@@ -10,9 +13,14 @@ return {
             },
           },
         },
-      }
-      opts.servers.tsserver.settings.completions.completeFunctionCalls = false
-    end,
+      },
+      tsserver = {
+        settings = {
+          completions = {
+            completeFunctionCalls = false,
+          },
+        },
+      },
+    },
   },
 }
-
