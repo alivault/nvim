@@ -16,7 +16,7 @@ return {
           chat = true,
           command = true,
           model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
-          system_prompt = "You are a helpful assistant. Keep your answers concise. When providing code, put the code in triple backticks for markdown formatting.",
+          system_prompt = "You are a helpful assistant. Keep your answers concise. When providing code, put the code in triple backticks for markdown formatting. Use 'typescript' for tsx and ts code blocks, never 'typescriptreact'.",
         },
       },
       hooks = {
