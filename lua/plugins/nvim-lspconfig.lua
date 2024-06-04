@@ -4,6 +4,9 @@ return {
     document_highlight = {
       enabled = false,
     },
+    inlay_hints = {
+      enabled = false,
+    },
     servers = {
       cssls = {
         settings = {
