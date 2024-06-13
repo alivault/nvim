@@ -4,19 +4,12 @@ return {
     require("gp").setup({
       openai_api_key = os.getenv("OPENAI_API_KEY"),
       agents = {
-        -- Disable default agents
-        { name = "ChatGPT4" },
-        { name = "ChatGPT3-5" },
-        { name = "CodeGPT4" },
-        { name = "CodeGPT3-5" },
-
-        -- Enable only GPT4o agent
         {
           name = "GPT-4o",
           chat = true,
           command = true,
           model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
-          system_prompt = "You are a helpful assistant. Keep your answers concise. When providing code, put the code in triple backticks for markdown formatting. Use 'typescript' for tsx and ts code blocks, never 'typescriptreact'.",
+          system_prompt = "You are a helpful assistant. Keep your answers concise. When providing code snippets, always leave comments for lines changed or added. Provide only the relevant parts of the code unless explicitly asked for the complete code. Format code in triple backticks. Use 'typescript' for tsx and ts code, never 'typescriptreact'.",
         },
       },
       hooks = {
@@ -26,11 +19,7 @@ return {
             .. "```{{filetype}}\n{{selection}}\n```\n\n"
             .. "Please respond by explaining the code above."
           local agent = gp.get_chat_agent()
-          if agent then
-            gp.Prompt(params, gp.Target.popup, nil, agent.model, template, agent.system_prompt)
-          else
-            print("No chat agent configured")
-          end
+          gp.Prompt(params, gp.Target.popup, nil, agent.model, template, agent.system_prompt)
         end,
 
         -- opens new chat with the entire current buffer as a context
