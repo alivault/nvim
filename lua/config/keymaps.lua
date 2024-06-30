@@ -26,9 +26,6 @@ map("n", "J", "<C-w>j", { desc = "Go to Lower Window" })
 map("n", "K", "<C-w>k", { desc = "Go to Upper Window" })
 map("n", "L", "<C-w>l", { desc = "Go to Right Window" })
 
--- Telescope
-map("n", "<leader>?", "<cmd>Telescope grep_string<cr>", { desc = "Find String" })
-
 -- ChatGPT (gp.nvim) commands
 local function keymapOptions(desc)
   return {
