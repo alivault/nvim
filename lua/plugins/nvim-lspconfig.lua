@@ -24,6 +24,17 @@ return {
           },
         },
       },
+      tailwindcss = {
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                "cva\\(([^)]*)\\)",
+              },
+            },
+          },
+        },
+      },
     },
   },
 }
