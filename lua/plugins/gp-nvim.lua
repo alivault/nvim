@@ -1,8 +1,13 @@
 return {
   "robitx/gp.nvim",
   config = function()
-    require("gp").setup({
-      openai_api_key = os.getenv("OPENAI_API_KEY"),
+    local conf = {
+      providers = {
+        openai = {
+          endpoint = "https://api.openai.com/v1/chat/completions",
+          secret = os.getenv("OPENAI_API_KEY"),
+        },
+      },
       agents = {
         {
           name = "GPT-4o",
@@ -29,7 +34,8 @@ return {
         end,
       },
       chat_confirm_delete = false,
-    })
+    }
+    require("gp").setup(conf)
 
     require("which-key").add({
       -- VISUAL mode mappings
