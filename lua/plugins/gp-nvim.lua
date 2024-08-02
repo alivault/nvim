@@ -73,7 +73,7 @@ return {
         { "<C-g>wv", ":<C-u>'<,'>GpWhisperVnew<cr>", desc = "Whisper Vnew" },
         { "<C-g>ww", ":<C-u>'<,'>GpWhisper<cr>", desc = "Whisper" },
         { "<C-g>x", ":<C-u>'<,'>GpContext<cr>", desc = "Visual GpContext" },
-        { "<C-g>e", ":<cmd>'<,'>GpExplain<cr>", desc = "Explain Selection" },
+        { "<C-g>e", ":<C-u>'<,'>GpExplain<cr>", desc = "Explain Selection" },
       },
 
       -- NORMAL mode mappings
