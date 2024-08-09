@@ -25,3 +25,6 @@ map("n", "H", "<C-w>h", { desc = "Go to Left Window" })
 map("n", "J", "<C-w>j", { desc = "Go to Lower Window" })
 map("n", "K", "<C-w>k", { desc = "Go to Upper Window" })
 map("n", "L", "<C-w>l", { desc = "Go to Right Window" })
+
+-- Reveal the current file in Finder (macOS)
+map("n", "<leader>r", "<cmd>silent !open -R %:p<cr>", { desc = "Reveal in Finder" })
