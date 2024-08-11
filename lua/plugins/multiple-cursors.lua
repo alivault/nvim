@@ -14,6 +14,15 @@ return {
       vim.g.minipairs_disable = false
       require("cmp").setup({ enabled = true })
     end,
+    custom_key_maps = {
+      {
+        "n",
+        "<leader>a",
+        function()
+          require("multiple-cursors").align()
+        end,
+      },
+    },
   },
   keys = {
     { "<D-A-j>", "<Cmd>MultipleCursorsAddDown<CR>", desc = "Add cursor down" },
