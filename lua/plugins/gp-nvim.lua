@@ -14,7 +14,7 @@ return {
           chat = true,
           command = true,
           model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
-          system_prompt = "You are a helpful assistant. Keep your answers concise. When providing code snippets, always leave comments for lines changed or added. Provide only the relevant parts of the code unless explicitly asked for the complete code. Format code in triple backticks. Use 'typescript' for tsx and ts code, never 'typescriptreact'.",
+          system_prompt = "You are a helpful assistant and master programmer. Keep your answers concise. When providing code, leave comments next to lines you have changed. Only provide the relevant parts of the code. Never give the whole file unless I ask you to do so. Keep your answered short and efficient.",
         },
       },
       hooks = {
