@@ -6,7 +6,7 @@ local map = vim.keymap.set
 
 -- General
 map({ "n", "v" }, "<bs>", "^", { desc = "Start of line (non-blank)" })
-map({ "n", "v" }, "<tab>", "$", { desc = "End of line (non-blank)" })
+-- map({ "n", "v" }, "<tab>", "$", { desc = "End of line (non-blank)" })
 map("n", "d<tab>", "d$", { desc = "End of line" })
 map("n", "<D-a>", "ggVG", { desc = "Select all" })
 map("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
