@@ -1,9 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
-    document_highlight = {
-      enabled = false,
-    },
     inlay_hints = {
       enabled = false,
     },
@@ -14,13 +11,6 @@ return {
             lint = {
               unknownAtRules = "ignore",
             },
-          },
-        },
-      },
-      tsserver = {
-        settings = {
-          completions = {
-            completeFunctionCalls = false,
           },
         },
       },
