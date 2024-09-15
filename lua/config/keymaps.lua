@@ -3,15 +3,18 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap.set
+local del = vim.keymap.del
 
 -- General
-map({ "n", "v" }, "<bs>", "^", { desc = "Start of line (non-blank)" })
--- map({ "n", "v" }, "<tab>", "$", { desc = "End of line (non-blank)" })
-map("n", "d<tab>", "d$", { desc = "End of line" })
 map("n", "<D-a>", "ggVG", { desc = "Select all" })
-map("n", "<leader>X", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
-map("n", "<C-->", "<C-o>", { desc = "Move back in jump list" })
-map("n", "<C-=>", "<C-i>", { desc = "Move forward in jump list" })
+del("n", "<leader>l") -- delete default Lazy keymap
+del("n", "<leader>L") -- delete default Lazy Changelog keymap
+map("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
+map("n", "<leader>lx", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
+map("n", "<leader>lc", function()
+  LazyVim.news.changelog()
+end, { desc = "LazyVim Changelog" })
+map("n", "<leader>L", "<cmd>LspRestart<cr>", { desc = "LSP Restart" })
 
 -- Buffer Line
 map("n", "<leader>d", "<cmd>bdelete<cr>", { desc = "Close Buffer" })
