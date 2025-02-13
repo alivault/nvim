@@ -15,6 +15,7 @@ map("n", "<leader>lc", function()
   LazyVim.news.changelog()
 end, { desc = "LazyVim Changelog" })
 map("n", "<leader>L", "<cmd>LspRestart<cr>", { desc = "LSP Restart" })
+map("n", "<C-c>", "ciw", { desc = "Change inner word" })
 
 -- Buffer Line
 map("n", "<leader>d", "<cmd>bdelete<cr>", { desc = "Close Buffer" })

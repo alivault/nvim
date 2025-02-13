@@ -5,3 +5,4 @@ local opt = vim.opt
 opt.wrap = true
 opt.conceallevel = 0
 opt.nrformats:append("unsigned")
+vim.g.snacks_animate = false
