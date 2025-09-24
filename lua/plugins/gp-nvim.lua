@@ -10,10 +10,10 @@ return {
       },
       agents = {
         {
-          name = "GPT-4o",
+          name = "GPT-5",
           chat = true,
           command = true,
-          model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
+          model = { model = "gpt-5" },
           system_prompt = "You are a helpful assistant and master programmer. Keep your answers concise. Only provide the relevant parts of the code. Never give the whole file unless I ask you to do so. Keep your answered short and efficient.",
         },
       },
